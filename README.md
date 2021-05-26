@@ -26,8 +26,10 @@
 ###### **1. Download the latest release**
 ###### **2. Extract it and run main.py**
 
+#### How to import in Gboard?
+##### **Run the code , generate the zip, copy it to your mobile and import from Gboard settings>Dictionary>Personal Dictionary>All Languages>then choose import option from the three dot options icon**
 
-#### **Run the code , generate the zip, copy it to your mobile and import from Gboard settings>Dictionary>Personal Dictionary>All Languages>then choose import option from the three dot options icon**
+###### **Enjoy !**
 
 >Made with Love™ ❤️
 >by Karthik Nair \
