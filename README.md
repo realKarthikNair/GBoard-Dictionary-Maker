@@ -35,7 +35,7 @@
 
 >by Karthik Nair 
 
->https://instagr.am/harry_kris_
+> https://instagr.am/realkarthiknair
 
->https://twitter.com/RealKarthikNair
+> https://twitter.com/RealKarthikNair
 
