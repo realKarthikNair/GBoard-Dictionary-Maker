@@ -15,16 +15,14 @@
 
 
 #### **Installation**
-##### On Linux
+
 >git clone https://github.com/realKarthikNair/GBoard-Dictionary-Maker
 >
 >cd GBoard-Dictionary-Maker
 >
 >python3 main.py
 
-##### General (including android)
-###### **1. Download the latest release**
-###### **2. Extract it and run main.py**
+
 
 #### How to import in Gboard?
 ##### **Run the code , generate the zip, copy it to your mobile and import from Gboard settings>Dictionary>Personal Dictionary>All Languages>then choose import option from the drop-down menu**
