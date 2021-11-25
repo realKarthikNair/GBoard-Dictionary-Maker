@@ -1,5 +1,5 @@
 # create a gboard dictionary interactively
-# code will be compatible to <python3.6 if f prefixes are replaced with some conventional formatting methods
+# code will be compatible to <python3.6 if f prefixes are replaced with some conventional formatting methods.
 
 from zipfile import ZipFile
 import os,datetime
