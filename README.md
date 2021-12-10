@@ -15,12 +15,9 @@
 
 
 #### **Installation**
-
->git clone https://github.com/realKarthikNair/GBoard-Dictionary-Maker
->
->cd GBoard-Dictionary-Maker
->
->python3 main.py
+    git clone https://github.com/realKarthikNair/GBoard-Dictionary-Maker
+    cd GBoard-Dictionary-Maker
+    python3 main.py
 
 
 
