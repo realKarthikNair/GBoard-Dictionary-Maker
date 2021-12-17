@@ -9,7 +9,7 @@
 
 #### **Features**
  1. Create Gboard importable dictionary file
- 2. Edit existing zip/txt dictionary file given (coming soon)
+ 2. Edit existing zip/txt dictionary file given
  3. 100% made with Python and yes , it's FOSS
  4. No dependency on third party modules
 
