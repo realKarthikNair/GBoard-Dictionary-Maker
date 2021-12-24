@@ -28,7 +28,7 @@
 
 >Made with Love™ ❤️
 
->by Karthik Nair
+>by Karthik Nair and Karan Arora
 
 Catch me on :
 
