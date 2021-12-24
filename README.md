@@ -1,6 +1,6 @@
 # GBoard-Dictionary-Maker
 
-### Make GBoard importable dictionaries interactively
+### Make GBoard importable dictionaries interactively !
 
 #### Ever thought about making a huge Gboard Dictionary so that you could type a lot of stuff easily BUT creating those dictionary shortcuts one by one feels painful ,right? 🤔 
 > **So here is the tool to simplify the stuff and create a Gboard importable zip of all the shortcuts you create**
