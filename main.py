@@ -156,6 +156,7 @@ def check_folder(os_name):
     elif os_name == 'posix':
         # Linux
         path = os.getenv("HOME")
+        path = str(path) + "/Gboard-Shortcuts"
         isdir = os.path.isdir(path)
         with open('folder_path.txt', 'w') as file:
             file.write("{}".format(path))
