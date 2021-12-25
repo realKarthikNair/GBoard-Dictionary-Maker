@@ -1,17 +1,37 @@
 # GBoard Dictionary Maker GUI
-import tkinter as tk
-from tkinter import messagebox, filedialog
+
+try:
+    import tkinter as tk
+    from tkinter import messagebox, filedialog
+except:
+    try:
+        if os.name()=="nt":os.system("pip install tk")
+        else: os.system('''x-terminal-emulator -e "sudo apt-get install python3-tk"''')
+    except:
+        print("Unable to install dependencies, try manually installing tkinter !")
+    
 import os
 import datetime
+from zipfile import ZipFile
 
 os_name = os.name
 words = []
 shortcuts = []
 
 
+def zipper(path,filename):
+    zip_name=filename[0:-4]+".zip"
+    file_path=os.path.join(path,zip_name)
+    with ZipFile(file_path,"w") as zip:
+        for i in path_eval(path):
+            if os.path.basename(i) == os.path.basename(filename) : zip.write(i, os.path.basename(i));zip.close()
+        success = os.path.join(path,filename[0:-4]+".zip")
+        if os.path.exists("demofile.txt"):
+            os.remove("demofile.txt")
+
 def save():
     """ Saves the Word and Shortcut Entered (if user don't want to add more words) """
-    global word_input, shortcut_input, words, shortcuts
+    global word_input, shortcut_input, words, shortcuts, path
     words.append(str(word_entry.get()))
     shortcuts.append(str(shortcut_entry.get()))
     user_choice = messagebox.askyesno('GBOARD Dictionary Maker', 'Do you want to add more words?')
@@ -21,15 +41,15 @@ def save():
     elif not user_choice:
         with open('folder_path.txt', 'r') as file_check:
             file_contents = file_check.readline()
-            path = str(file_contents) + "/Gboard-Shortcuts"
+            path = str(file_contents)
         file_check.close()
         if os_name == "nt":
             # Windows (Generates File Name)
+            path = path + "/Gboard-Shortcuts"
             file_name = str(path) + "/shortcuts-" + datetime.datetime.now().strftime("%d-%m-%Y-%H-%M-%S") + ".txt"
         else:
             # Other than Windows (Generates File Name)
-            file_name = os.path.join(str(path),
-                                     "shortcuts-" + datetime.datetime.now().strftime("%d-%m-%Y-%H-%M-%S") + ".txt")
+            file_name = os.path.join(str(path), "shortcuts-" + datetime.datetime.now().strftime("%d-%m-%Y-%H-%M-%S") + ".txt")
         with open('{}'.format(file_name), 'w') as file_save:
             for i in range(0, len(words)):
                 file_save.write("{}\t{}\n".format(shortcuts[i], words[i]))
@@ -90,6 +110,7 @@ def check_dir():
         file.close()
         new_path = os.path.join(input_path, 'Gboard-Shortcuts')
         os.mkdir(new_path)
+        main_gui()
     else:
         if not os.path.exists(input_path):
             messagebox.showerror('(!) No Directory Exist (!)', 'No directory exist at path:\n{}'.format(input_path))
@@ -167,6 +188,7 @@ def check_folder(os_name):
             gui_root.destroy()
             new_folder()
         elif isdir:
+            gui_root.destroy()
             gboarddict()
 
     else:
