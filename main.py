@@ -28,7 +28,8 @@ def save():
             file_name = str(path) + "/shortcuts-" + datetime.datetime.now().strftime("%d-%m-%Y-%H-%M-%S") + ".txt"
         else:
             # Other than Windows (Generates File Name)
-            file_name = os.path.join(str(path), "shortcuts-" + datetime.datetime.now().strftime("%d-%m-%Y-%H-%M-%S") + ".txt")
+            file_name = os.path.join(str(path),
+                                     "shortcuts-" + datetime.datetime.now().strftime("%d-%m-%Y-%H-%M-%S") + ".txt")
         with open('{}'.format(file_name), 'w') as file_save:
             for i in range(0, len(words)):
                 file_save.write("{}\t{}\n".format(shortcuts[i], words[i]))
@@ -154,11 +155,11 @@ def check_folder(os_name):
 
     elif os_name == 'posix':
         # Linux
-        with open('folder_path.txt', 'r') as file:
-            file_contents = file.readline(2)
-        path = str(file_contents)
-        file.close()
+        path = os.getenv("HOME")
         isdir = os.path.isdir(path)
+        with open('folder_path.txt', 'w') as file:
+            file.write("{}".format(path))
+        file.close()
         if not isdir:
             messagebox.showinfo("(!) No Folder Found (!)",
                                 "No Folder Found! Enter the path to make one\nor leave it blank to save it in default path.\ndefault path = '$HOME/gboard_shortcuts'")
@@ -218,5 +219,6 @@ def main_gui():
     gui_root.mainloop()
 
 
+# Run
 if __name__ == '__main__':
     main_gui()
