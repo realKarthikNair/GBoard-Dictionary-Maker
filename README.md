@@ -15,7 +15,8 @@
 Well imagine you have to make 100 such shortcuts. You'll follow the step above, then go to the previous window, then again tap the "+" icon, repeat for 100 times? That's exactly why we made this project. GBoard-Dictionary-Maker can create mutiple such shortcuts in bulk on a single window and then generate a Gboard importable zip!
 
 <br>
-> *All u need is a computer with Python / android device with Pydroid 3 installed to run this code and create GBoard importable dictionaries with ease*
+
+*All u need is a computer with Python / android device with Pydroid 3 installed to run this code and create GBoard importable dictionaries with ease*
 
 #### **Features**
  1. Create Gboard importable dictionary file
