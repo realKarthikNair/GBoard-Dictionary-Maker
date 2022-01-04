@@ -43,9 +43,11 @@ Well imagine you have to make 100 such shortcuts. You'll follow the step above, 
 
 >Made with Love™ ❤️
 
->by Karthik Nair
+>by Karthik Nair and Karan Arora
 
-Catch me on :
+Catch us on: 
 
 [instagram ](https://www.instagram.com/harry_kris_) <br>
-[twitter](https://www.twitter.com/realkarthiknair)
+[twitter](https://www.twitter.com/realkarthiknair) <br>
+
+[instagram ](https://www.instagram.com/arorakaran_18) 
