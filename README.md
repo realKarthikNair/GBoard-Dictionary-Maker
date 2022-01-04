@@ -11,7 +11,7 @@
  1. Create Gboard importable dictionary file
  2. Edit existing zip/txt dictionary file given
  3. 100% made with Python and yes , it's FOSS
- 4. No dependency on third party modules
+ 
 
 
 #### **Installation**
@@ -30,7 +30,3 @@
 
 >by Karthik Nair and Karan Arora
 
-Catch me on :
-
-[instagram ](https://www.instagram.com/harry_kris_) <br>
-[twitter](https://www.twitter.com/realkarthiknair)
