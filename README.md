@@ -1,5 +1,5 @@
 # GBoard-Dictionary-Maker
->>>Upcoming updates are being cooked in the 'alpha branch': feel free to test them out...
+>>>Upcoming updates are being cooked in the 'alpha'  branch: feel free to test them out...
 ## Make GBoard importable dictionaries interactively ! 
 <br>
 
