@@ -40,8 +40,7 @@ Well imagine you have to make 100 such shortcuts. You'll follow the step above, 
 
 ###### **Enjoy !**
 
->Made with Love™ ❤️
-
+>Made with Love™ ❤️<br>
 >by Karthik Nair and Karan Arora
 
 Catch us on: 
