@@ -65,7 +65,7 @@ def dict_create(path,status,file=None,is_from_zip=None):
     shortcuts=shortcut_maker(status)
     dict_txt.writelines(shortcuts);dict_txt.close()
     if is_from_zip==True:path = zipper(path,os.path.join(path,file))
-    if is_from_zip!=True:path = zipper(path,os.path.join(path,file_name))
+    if is_from_zip==False:path = zipper(path,os.path.join(path,file_name))
     print(f"success! saved file as {os.path.basename(path)} dictionary file in {os.path.dirname(path)} ")
     
 def dict_add(path,file=None):
