@@ -24,10 +24,15 @@ Well imagine you have to make 100 such shortcuts. You'll follow the step above, 
  3. 100% made with Python and yes , it's FOSS
 
 
-#### **Installation**
+#### **Installation from the command line**
     git clone https://github.com/realKarthikNair/GBoard-Dictionary-Maker
     cd GBoard-Dictionary-Maker
     python3 main.py
+
+#### **manual installation: download the latest zip from 'releases'**
+1. unzip it
+2. Open the folder
+3. Run main.py file
 
 
 
