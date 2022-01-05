@@ -3,7 +3,6 @@
 
 import os
 import datetime
-import zipfile
 from zipfile import ZipFile
 
 os_name = os.name
@@ -30,7 +29,7 @@ def save(entry):
     if entry == "new":
         if os_name == "nt":
             # Windows (Generates File Name)
-            path = path + "/Gboard-Shortcuts"
+            path = path + "Gboard-Shortcuts"
             file_name = str(path) + "/shortcuts-" + datetime.datetime.now().strftime("%d-%m-%Y-%H-%M-%S") + ".txt"
         else:
             # Other than Windows (Generates File Name)
@@ -39,7 +38,7 @@ def save(entry):
 
         # Enter the Values into an .txt file (name generated above)
         with open('{}'.format(file_name), 'w') as file_save:
-            file_save.write("G-BOARD DICTIONARY\n")
+            file_save.write("# Gboard Dictionary version:1\n")
             if entry == "new":
                 # If running from New
                 for i in range(0, len(words)):
@@ -47,7 +46,7 @@ def save(entry):
         file_save.close()
         # Just Create a Zip File with the same name and deletes the txt file
         file_name = file_name[:-4]
-        zipObj = ZipFile('{}.zip'.format(file_name), 'w', zipfile.ZIP_DEFLATED)
+        zipObj = ZipFile('{}.zip'.format(file_name), 'w')
         zipObj.write('{}.txt'.format(file_name), str(file_name.replace(path + "/", "")) + ".txt")
         zipObj.close()
         os.remove("{}.txt".format(file_name))
@@ -56,17 +55,16 @@ def save(entry):
         words = []
         shortcuts = []
     else:
-        unzipped_file = zipfile.ZipFile("{}".format(add_file_name), "r")
-        # This Needs change
-        a_file = unzipped_file.open(
-            "{}.txt".format(add_file_name[:-4].replace("{}Gboard-Shortcuts/".format(temp_path), "")), 'w')
-        a_file.write(b"G-BOARD DICTIONARY\n\r")
+        txt_file = open('{}.txt'.format(add_file_name[:-4]), 'a+')
         for i in range(0, len(total_words)):
             written = ("{}\t{}\n".format(total_shortcuts[i], total_words[i]))
-            print(written)
-            a_file.write(bytes(written))
-        a_file.close()
-
+            txt_file.writelines(written)
+        txt_file.close()
+        zipObj = ZipFile('{}'.format(add_file_name), 'w')
+        zipObj.write('{}.txt'.format(add_file_name[:-4]), add_file_name[:-4].replace(path1 + "/", "") + ".txt")
+        zipObj.close()
+        os.remove("{}.txt".format(add_file_name[:-4]))
+        messagebox.showinfo('(!) Saving Changes.... (!)', "Saving file..\nFile:'{}.zip'".format(add_file_name[:-4]))
         new_add_gui.destroy()
         total_words = []
         total_shortcuts = []
@@ -239,7 +237,7 @@ def check_folder(os_name):
         # Windows
         with open('folder_path.txt', 'r') as file:
             file_contents = file.readline()
-        path = str(file_contents) + "/Gboard-Shortcuts"
+        path = str(file_contents) + "Gboard-Shortcuts"
         file.close()
         isdir = os.path.isdir(path)
         if not isdir:
@@ -270,14 +268,6 @@ def check_folder(os_name):
             gui_root.destroy()
             gboarddict()
 
-    else:
-        # Android , the lowest possible directory an app can access is /data/data/<data partition of that app> without root access )
-        path = os.path.join(os.environ['HOME'], "gboard_shortcuts")
-        if "/data" == path[
-                      0:5]:  # for android (in android , the lowest possible directory an app can access is /data/data/<data partition of that app> without root access )
-            path = "/storage/emulated/0/gboard_shortcuts"
-        print(f"(default is {path} )")
-
 
 def folder_run():
     """ Just Set the status to save which helps in Save() fn and also runs check_folder() fn"""
@@ -296,10 +286,19 @@ def choose():
     file_check.close()
     if os_name == "nt":
         # Windows (Generates File Name)
-        path1 = path1 + "/Gboard-Shortcuts"
+        path1 = path1 + "Gboard-Shortcuts"
+    elif os_name == "posix":
+        path1 = os.getenv("HOME")
+        path1 = str(path) + "/Gboard-Shortcuts"
     folder_selected = filedialog.askopenfilename(initialdir=path1)
     add_file_name = folder_selected
     selected = True
+
+
+def on_closing():
+    if messagebox.askokcancel("Quit", "Do you want to quit?\n(No Effect will take place!)"):
+        new_add_gui.destroy()
+        os.remove("{}.txt".format(add_file_name[:-4]))
 
 
 def open_file():
@@ -333,25 +332,22 @@ def open_file():
         scroll_bar.pack(side="right", fill="y")
 
         dictionary = tk.Listbox(new_frame, yscrollcommand=scroll_bar.set, width=40)
-        unzipped_file = zipfile.ZipFile("{}".format(add_file_name), "r")
-        # Just take the name of the zip file and replace the name with .txt ext (so it can be opened)
+
+        # Extract the .txt from Zip (add_file_name = zip selected by the user)
+        with ZipFile(add_file_name, 'r') as zip_files:
+            zip_files.extractall(path=path1)
+
         if os_name == "nt":
-            a_file = unzipped_file.open(
-                "{}.txt".format(add_file_name[:-4].replace("{}Gboard-Shortcuts/".format(temp_path), "")), 'r')
+            a_file = open("{}.txt".format(add_file_name[:-4]), 'r')
+
         else:
-            temp_add_file = (str(add_file_name).split('/'))
-            temp_add_file[-1] = temp_add_file[-1].replace(".zip", "")
-            a_file = unzipped_file.open("{}.txt".format(temp_add_file[-1]), "r")
+            # If this doesn't work on linux change this
+            a_file = open("{}.txt".format(add_file_name[:-4]), "r")
 
         for file_words in a_file:
-            temp_words = ((file_words.decode()).replace("\r\n", "")).replace("\t", "    ")
-            temp_word1 = ((file_words.decode()).replace("\r\n", "")).replace("\t", ", ")
+            temp_words = (file_words.replace("\r\n", "")).replace("\t", "    ")
             dictionary.insert("end", temp_words)
-            if run > 1:
-                temp_list = temp_word1.split(", ")
-                total_words.append(temp_list[0])
-                total_shortcuts.append(temp_list[1])
-            run += 1
+        a_file.close()
 
         # Scrollbar related
         scroll_bar.config(command=dictionary.yview)
@@ -371,17 +367,23 @@ def open_file():
         new_add_gui_can.create_window(400, 200, window=new_shortcut_entry)
 
         add_more_button = tk.Button(new_add_gui_can, text="Add More", bg="yellow", padx=15, pady=10,
-                                    command=lambda: (check_words(entry="add", sr="save")))
+                                    command=lambda: (check_words(entry="add", sr="add_more")))
         new_add_gui_can.create_window(200, 300, window=add_more_button)
 
         save_button = tk.Button(new_add_gui_can, text="Save", bg="lime", padx=15, pady=10,
-                                command=lambda: (check_words(entry="add", sr="add_more")))
+                                command=lambda: (check_words(entry="add", sr="save")))
         new_add_gui_can.create_window(300, 300, window=save_button)
 
+        new_add_gui.protocol("WM_DELETE_WINDOW", on_closing)
         new_add_gui.mainloop()
 
     else:
         messagebox.showerror('(!) Error (!)', "Choose A File!!")
+
+
+def go_back():
+    add_gui.destroy()
+    main_gui()
 
 
 def add_words_gui():
@@ -403,6 +405,10 @@ def add_words_gui():
 
     open_button = tk.Button(add_gui, text="Open", bg="lightgreen", command=open_file)
     open_button.pack()
+
+    # In-Case someone has no existing file
+    back_button = tk.Button(add_gui, text="Back", bg="red", fg="white", command=go_back)
+    back_button.pack()
 
     add_gui.mainloop()
 
@@ -466,4 +472,3 @@ if __name__ == '__main__':
         except:
             print("Unable to install dependencies, Try manually installing tkinter!")
     main_gui()
-
