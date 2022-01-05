@@ -1,7 +1,6 @@
 # GBoard-Dictionary-Maker
-
+>>>Upcoming updates are being cooked in the 'alpha'  branch: feel free to test them out...
 ## Make GBoard importable dictionaries interactively ! 
-<br>
 
 ### *What is a Gboard Dictionary? Why do u need to make one?*
 #### Let us assume you type out the word "imagination" a lot on your smartphone keyboard. What if you just type in "imn" and "imagination" simply pop-ups in your keyboard suggestion? Now there must be like hundred such words, no matter what language you type. Gboard, the Google Keyboard App that ships with most of our smartphones as default allows you to make as many as such custom shortcuts, enabling one to type as fast as 3 times the normal speed.
@@ -41,8 +40,7 @@ Well imagine you have to make 100 such shortcuts. You'll follow the step above, 
 
 ###### **Enjoy !**
 
->Made with Love™ ❤️
-
+>Made with Love™ ❤️<br>
 >by Karthik Nair and Karan Arora
 
 Catch us on: 
