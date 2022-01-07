@@ -79,19 +79,21 @@ Also that these shortcuts can be made with any language, or even emojis!
 ## *How to create one?*
 Gboard Settings>Dictionary>Personal dictionary>All languages>Then tap on the "+" icon and create shortcuts. 
 <br>
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 ## *"Okay that seems easy, so what's the point of this project?"*
 Well, imagine you have to make 100 such shortcuts. You'll follow the steps above, then go to the previous menu, then again tap the "+" icon, repeat it for 100 times? That's exactly why we made this project. <br>GBoard-Dictionary-Maker can create mutiple such shortcuts in bulk on a single window and then generate a GBoard importable zip!
 <br>
+<p align="right">(<a href="#top">back to top</a>)</p>
 ## *Features*
  1. Create Gboard importable dictionary file
  2. Edit existing zip/txt dictionary file given
  3. 100% made with Python and yes , it's FOSS<br>
+<p align="right">(<a href="#top">back to top</a>)</p>
 ## *Prerequisites*
  1. Python
  2. Tkinter
 <br>A simple Google search of the format "install Python/Tkinter on \<your platform\>" would lead you to the right pages<br> e.g.,Google "Install Python on Windows" and "install Tkinter on Windows"
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 ## *Installation*
 ### **Installation from the command line**
     git clone https://github.com/realKarthikNair/GBoard-Dictionary-Maker
@@ -102,10 +104,10 @@ Well, imagine you have to make 100 such shortcuts. You'll follow the steps above
 1. unzip it
 2. Open the folder
 3. Run main.py file
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 ### How to import in Gboard?
 **Run the code , generate the zip, copy it to your mobile and import from Gboard settings>Dictionary>Personal Dictionary>All Languages>then choose import option from the drop-down menu**
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 ## Roadmap
 
 - [x] Add a Graphical User Interface (GUI)
@@ -116,14 +118,15 @@ Well, imagine you have to make 100 such shortcuts. You'll follow the steps above
 - [ ] Multi-language Support
 
 See the [open issues](https://github.com/realKarthikNair/GBoard-Dictionary-Maker/issues) for a full list of proposed features (and known issues).
+<p align="right">(<a href="#top">back to top</a>)</p>
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make GBoard-Dictionary-Maker, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
-
 ### **We Urgently need someone on Mac to help us extend project compatibility**
+<p align="right">(<a href="#top">back to top</a>)</p>
 ## License 
 This software is being licensed on [these](https://github.com/realKarthikNair/GBoard-Dictionary-Maker/blob/main/LICENSE.md) terms 
 ## *Enjoy !*
@@ -132,7 +135,7 @@ This software is being licensed on [these](https://github.com/realKarthikNair/GB
 >by Karthik Nair and Karan Arora
 
 <!-- > Upcoming updates are being cooked in the 'alpha'  branch: feel free to test them out...-->
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 ## Catch us on: 
 ### [Karthik Nair](https://github.com/realkarthiknair)
 *[instagram ](https://www.instagram.com/harry_kris_) <br>*
@@ -140,6 +143,6 @@ This software is being licensed on [these](https://github.com/realKarthikNair/GB
 
 ### [Karan Arora](https://github.com/AroraKaran19)
 *[instagram ](https://www.instagram.com/arorakaran_18)*
-
+<p align="right">(<a href="#top">back to top</a>)</p>
 <!-- MARKDOWN LINKS & IMAGES -->
 [product-screenshot]: images/screenshot.png
