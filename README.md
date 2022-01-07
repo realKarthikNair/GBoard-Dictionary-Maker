@@ -23,7 +23,7 @@
     <br />
 </div>
 <p align="center">
-    <a href="https://github.com/realKarthikNair/GBoard-Dictionary-Maker#installation" alt="Installation">
+    <a href="#installation" alt="Installation">
         <img src="https://img.shields.io/badge/Installation-%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-brightgreen" /></a>
     <a href="https://github.com/realKarthikNair/GBoard-Dictionary-Maker/issues" alt="Report a Bug">
         <img src="https://img.shields.io/badge/%20%20Report%20a%20Bug-%F0%9F%90%9E-orange" /></a>
