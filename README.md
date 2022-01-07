@@ -3,11 +3,11 @@
 ## Make GBoard importable dictionaries interactively ! 
 
 ### *What is a Gboard Dictionary? Why do u need to make one?*
-#### Let us assume you type out the word "imagination" a lot on your smartphone keyboard. What if you just type in "imn" and "imagination" simply pop-ups in your keyboard suggestion? Now there must be like hundred such words, no matter what language you type. Gboard, the Google Keyboard App that ships with most of our smartphones as default allows you to make as many as such custom shortcuts, enabling one to type as fast as 3 times the normal speed.
+Let us assume you type out the word "imagination" a lot on your smartphone keyboard. What if you just type in "imn" and "imagination" simply pop-ups in your keyboard suggestion? Now there must be like hundred such words, no matter what language you type. Gboard, the Google Keyboard App that ships with most of our smartphones as default allows you to make as many as such custom shortcuts, enabling one to type as fast as 3 times the normal speed.
 <br>
 
 ### *How does one create one?*
-#### Gboard Settings>Dictionary>Personal dictionary>All languages>Then tap on the "+" icon and create shortcuts.
+Gboard Settings>Dictionary>Personal dictionary>All languages>Then tap on the "+" icon and create shortcuts.
 <br>
 
 ### Okay that seems easy, so what's the point of this project?
@@ -34,7 +34,7 @@ Well imagine you have to make 100 such shortcuts. You'll follow the step above, 
 
 
 #### How to import in Gboard?
-##### **Run the code , generate the zip, copy it to your mobile and import from Gboard settings>Dictionary>Personal Dictionary>All Languages>then choose import option from the drop-down menu**
+**Run the code , generate the zip, copy it to your mobile and import from Gboard settings>Dictionary>Personal Dictionary>All Languages>then choose import option from the drop-down menu**
 
 ###### **Enjoy !**
 
