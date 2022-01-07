@@ -70,6 +70,7 @@ Now, GBoard also allows you to create many such custom dictionary elements, like
 Also that these shortcuts can be made with any language, or even emojis!
 <br>
 <p align="right">(<a href="#top">back to top</a>)</p>
+
 ### Built With
 
 * [Python3](https://www.python.org/)
