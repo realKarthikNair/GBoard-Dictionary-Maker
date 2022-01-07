@@ -25,9 +25,9 @@
 <p align="center">
     <a href="#installation" alt="Installation">
         <img src="https://img.shields.io/badge/Installation-%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-brightgreen" /></a>
-    <a href="https://github.com/realKarthikNair/GBoard-Dictionary-Maker/issues" alt="Report a Bug">
+    <a href="https://github.com/realKarthikNair/GBoard-Dictionary-Maker/issues/new/choose" alt="Report a Bug">
         <img src="https://img.shields.io/badge/%20%20Report%20a%20Bug-%F0%9F%90%9E-orange" /></a>
-    <a href="https://github.com/realKarthikNair/GBoard-Dictionary-Maker/issues" alt="Request a Feature">
+    <a href="https://github.com/realKarthikNair/GBoard-Dictionary-Maker/issues/new/choose" alt="Request a Feature">
         <img src="https://img.shields.io/badge/Request%20a%20Feature-%F0%9F%93%88-yellowgreen" /></a>
     <a href="https://telegra.ph/payment-links-coming-soon-01-07" alt="Donate">
         <img src="https://img.shields.io/badge/donate-%F0%9F%92%B0-lightgrey" /></a>
