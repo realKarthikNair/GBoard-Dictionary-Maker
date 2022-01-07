@@ -15,8 +15,6 @@ Well imagine you have to make 100 such shortcuts. You'll follow the step above, 
 
 <br>
 
-*All u need is a computer with Python / android device with Pydroid 3 installed to run this code and create GBoard importable dictionaries with ease*
-
 #### **Features**
  1. Create Gboard importable dictionary file
  2. Edit existing zip/txt dictionary file given
