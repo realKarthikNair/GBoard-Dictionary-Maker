@@ -19,7 +19,7 @@
  
  
   <p align="center">
- <h3>Make GBoard importable dictionaries interactively ! </h3>
+ <h3>Make GBoard importable dictionaries with ease ! </h3>
     <br />
 </div>
 <p align="center">
