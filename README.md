@@ -76,6 +76,8 @@ Also that these shortcuts can be made with any language, or even emojis!
 * [TKinter](https://docs.python.org/3/library/tkinter.html)
 * [Python Zipfile](https://docs.python.org/3/library/zipfile.html)
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## *How to create one?*
 Gboard Settings>Dictionary>Personal dictionary>All languages>Then tap on the "+" icon and create shortcuts. 
 <br>
