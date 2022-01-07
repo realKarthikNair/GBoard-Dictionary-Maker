@@ -26,7 +26,7 @@
 
 
 ### *What is a GBoard Dictionary? Why do u need to make one?*
-A GBoard Dictionaries allow GBoard- The Google Keyboard to display word suggestion pop-ups whenever you start typing. These suggestions save a lot of our typing time, right?<br>
+GBoard Dictionaries allow GBoard- The Google Keyboard to display word suggestion pop-ups whenever you start typing. These suggestions save a lot of our typing time, right?<br>
 Now, GBoard also allows you to create many such custom dictionary elements, like keybindings, e.g., you type in "hey" and boom! you get an entire sentence "Hey There! This is Jennifer" as a suggestion, which you can tap and automatically type in an entire sentence that quickly.
 <br>
 
