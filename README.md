@@ -133,7 +133,7 @@ This software is being licensed on [these](https://github.com/realKarthikNair/GB
 
 <!-- > Upcoming updates are being cooked in the 'alpha'  branch: feel free to test them out...-->
 
-## *Catch us on: *
+## Catch us on: 
 ### [Karthik Nair](https://github.com/realkarthiknair)
 *[instagram ](https://www.instagram.com/harry_kris_) <br>*
 *[twitter](https://www.twitter.com/realkarthiknair) <br>*
