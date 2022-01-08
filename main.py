@@ -130,7 +130,6 @@ def gboarddict():
     word_gui = tk.Tk()
     word_gui.title('GBOARD Dictionary Maker')
     word_gui.geometry('500x500')
-    word_gui.iconbitmap(r'res/logo.ico')
     word_gui.resizable(width=False, height=False)
 
     word_canvas = tk.Canvas(word_gui, bg='#ba8f6a', height=500, width=500)
@@ -221,7 +220,6 @@ def new_folder():
     # Asks user to enter the path for the folder
     new_root = tk.Tk()
     new_root.title('Enter Path')
-    new_root.iconbitmap(r'res/logo.ico')
     new_root.geometry('300x150')
     new_root.resizable(width=False, height=False)
 
@@ -303,7 +301,7 @@ def choose():
         path1 = path1 + "Gboard-Shortcuts"
     elif os_name == "posix":
         path1 = os.getenv("HOME")
-        path1 = str(path) + "/Gboard-Shortcuts"
+        path1 = str(path1) + "/Gboard-Shortcuts"
     folder_selected = filedialog.askopenfilename(initialdir=path1)
     add_file_name = folder_selected
     selected = True
@@ -329,7 +327,6 @@ def open_file():
         new_add_gui = tk.Tk()
         new_add_gui.title('{}.txt'.format(add_file_name[:-4]))
         new_add_gui.geometry('500x400')
-        new_add_gui.iconbitmap(r'res/logo.ico')
         new_add_gui.resizable(width=False, height=False)
 
         new_add_gui_can = tk.Canvas(new_add_gui, bg="#ba8f6a", height=400, width=500)
@@ -445,7 +442,6 @@ def file_choose():
     add_gui = tk.Tk()
     add_gui.title('Choose File')
     add_gui.geometry('300x100')
-    add_gui.iconbitmap(r'res/logo.ico')
     add_gui.resizable(width=False, height=False)
 
     add_label = tk.Label(add_gui, text="Select A File:")
@@ -477,7 +473,6 @@ def main_gui():
     gui_root = tk.Tk()
     gui_root.title('GBOARD Dictionary Maker')
     gui_root.geometry('800x800')
-    gui_root.iconbitmap(r'res/logo.ico')
     gui_root.resizable(width=False, height=False)
 
     gui_canvas = tk.Canvas(gui_root, bg="#ccbcaf", height=800, width=800)
