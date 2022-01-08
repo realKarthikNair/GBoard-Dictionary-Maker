@@ -71,6 +71,8 @@ Also that these shortcuts can be made with any language, or even emojis!
 <br>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<img src = "res/demo2.gif" width ="360" /> <img src = "res/demo3.gif" width ="360" /><img src = "res/demo1.gif" width ="360" />
+
 ### Built With
 
 * [Python3](https://www.python.org/)
