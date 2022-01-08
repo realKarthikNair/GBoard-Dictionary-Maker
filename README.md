@@ -1,4 +1,3 @@
-
 <p align="center">
     <a href="https://github.com/realKarthikNair/GBoard-Dictionary-Maker/graphs/contributors" alt="Contributors">
         <img src="https://img.shields.io/github/contributors/realKarthikNair/GBoard-Dictionary-Maker.svg?style=for-the-badge" /></a>
