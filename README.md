@@ -153,7 +153,7 @@ This software is being licensed on [these](https://github.com/realKarthikNair/GB
 <p align="left">
     <a href="https://www.instagram.com/arorakaran_18" alt="instagram">
         <img src="https://img.shields.io/badge/Instagram-%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-yellowgreen" /></a>
-    <a href="telegram.me/karan_arora18" alt="Telegram">
+    <a href="https://www.telegram.me/karan_arora18" alt="Telegram">
         <img src="https://img.shields.io/badge/Telegram-%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-orange" /></a>
 </p>
 
