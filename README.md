@@ -70,7 +70,7 @@ Also that these shortcuts can be made with any language, or even emojis!
 <br>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<img src = "res/demo2.gif" width ="240" /> <img src = "res/demo3.gif" width ="240" /><img src = "res/demo1.gif" width ="240" />
+<img src = "res/demo2.gif" width ="240" /> <img src = "res/demo3.gif" width ="240" /> <img src = "res/demo1.gif" width ="240" />
 
 ### Built With
 
