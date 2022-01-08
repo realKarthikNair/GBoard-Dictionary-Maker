@@ -11,18 +11,8 @@
 <br />
 <div align="center">
   <a href="https://github.com/realKarthikNair/GBoard-Dictionary-Maker">
-    <img src="res/logo.png" alt="Logo" width="300" height="250">
+    <img src="https://i.ibb.co/TH5068T/gboarddictionarylogo.png" alt="Logo" width="300" height="250">
   </a>
-
-## THIS TREE SERVES AS A CONSOLE BASED IMPLEMENATION OF THE PROJECT
-### [Serves as a legacy branch for users who (for any reason) is unable/don't want to install tkinter ]
-
-IF YOU SOMEHOW ENDED UP HERE UNINTENTIONALLY, IT IS HIGHLY RECOMMENDED TO REFER THE MAIN BRANCH FOR UPDATED CODE. That said, 'minimalism' enthusiasts for whom a GUI isn't a deal can continue using this.
-
-
-
-# GBoard-Dictionary-Maker
->>>>>>> origin/legacy
 
 <h2 align="center">GBoard-Dictionary-Maker</h2>
  
