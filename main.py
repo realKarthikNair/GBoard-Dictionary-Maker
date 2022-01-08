@@ -10,6 +10,7 @@ words = []
 shortcuts = []
 selected = False
 entry = "None"
+#tf
 
 
 def save(entry):
