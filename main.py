@@ -10,7 +10,7 @@ words = []
 shortcuts = []
 selected = False
 entry = "None"
-
+#testing
 
 def save(entry):
     """ Saves the Word and Shortcut Entered (if user don't want to add more words) """
