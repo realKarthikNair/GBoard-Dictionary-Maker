@@ -11,7 +11,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/realKarthikNair/GBoard-Dictionary-Maker">
-    <img src="https://i.ibb.co/TH5068T/gboarddictionarylogo.png" alt="Logo" width="300" height="250">
+    <img src="res/logo.png" alt="Logo" width="300" height="250">
   </a>
 
 <h2 align="center">GBoard-Dictionary-Maker</h2>
