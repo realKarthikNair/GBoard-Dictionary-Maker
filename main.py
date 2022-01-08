@@ -10,7 +10,7 @@ words = []
 shortcuts = []
 selected = False
 entry = "None"
-#hello there
+#hello there !
 
 
 def save(entry):
