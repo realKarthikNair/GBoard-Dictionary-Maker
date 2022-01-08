@@ -10,7 +10,7 @@ words = []
 shortcuts = []
 selected = False
 entry = "None"
-as = 10
+as = 1
 
 
 def save(entry):
