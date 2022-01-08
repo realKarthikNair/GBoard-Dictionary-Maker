@@ -11,7 +11,6 @@ shortcuts = []
 selected = False
 entry = "None"
 
-
 def save(entry):
     """ Saves the Word and Shortcut Entered (if user don't want to add more words) """
     global words, shortcuts, path, total_words, total_shortcuts
