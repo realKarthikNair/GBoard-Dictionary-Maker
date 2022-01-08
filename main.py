@@ -10,7 +10,7 @@ words = []
 shortcuts = []
 selected = False
 entry = "None"
-nothing="var"
+nothing="hi"
 
 
 
