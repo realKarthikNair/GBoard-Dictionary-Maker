@@ -42,7 +42,7 @@ def save(entry):
             if entry == "new":
                 # If running from New
                 for i in range(0, len(words)):
-                    file_save.write("{}\t{}\n".format(shortcuts[i], words[i]))
+                    file_save.write("{}\t{}\t\n".format(shortcuts[i], words[i]))
         file_save.close()
         # Just Create a Zip File with the same name and deletes the txt file
         file_name = file_name[:-4]

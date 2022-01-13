@@ -1,1 +1,1 @@
-c:\
+/home/karthik/Gboard-Shortcuts
