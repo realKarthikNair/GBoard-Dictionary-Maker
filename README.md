@@ -11,7 +11,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/realKarthikNair/GBoard-Dictionary-Maker">
-    <img src="res/logo.png" alt="Logo" width="300" height="250">
+    <img src="https://i.ibb.co/TH5068T/gboarddictionarylogo.png" alt="Logo" width="300" height="250">
   </a>
 
 <h2 align="center">GBoard-Dictionary-Maker</h2>
@@ -112,12 +112,12 @@ Well, imagine you have to make 100 such shortcuts. You'll follow the steps above
 
 ## Roadmap
 
-- [x] Add a Graphical User Interface (GUI)
-- [x] Ability to add more shortcuts to existing dictionary zips
-- [ ] Support on Mac and Android
-- [ ] Documenting and further optimisation of code
-- [ ] Fix some graphical glitches in Linux (possibly in Mac OS and other UNIX derivatives too)
-- [ ] Multi-language Support
+   ✅ Add a Graphical User Interface (GUI)<br>
+   ✅ Ability to add more shortcuts to existing dictionary zips<br>
+  〚 〛 Support on Mac and Android<br>
+  〚 〛  Documenting and further optimisation of code<br>
+  〚 〛 Fix some graphical glitches in Linux (possibly in Mac OS and other UNIX derivatives too)<br>
+  〚 〛 Multi-language Support<br>
 
 See the [open issues](https://github.com/realKarthikNair/GBoard-Dictionary-Maker/issues) for a full list of proposed features (and known issues).
 ## Contributing
@@ -139,11 +139,24 @@ This software is being licensed on [these](https://github.com/realKarthikNair/GB
 
 ## Catch us on: 
 ### [Karthik Nair](https://github.com/realkarthiknair)
-*[instagram ](https://www.instagram.com/harry_kris_) <br>*
-*[twitter](https://www.twitter.com/realkarthiknair) <br>*
+
+<p align="left">
+    <a href="https://www.instagram.com/harry_kris_" alt="instagram">
+        <img src="https://img.shields.io/badge/Instagram-%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-yellowgreen" /></a>
+    <a href="https://www.twitter.com/realkarthiknair" alt="twitter">
+        <img src="https://img.shields.io/badge/Twitter-%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-orange" /></a>
+</p>
+
 
 ### [Karan Arora](https://github.com/AroraKaran19)
-*[instagram ](https://www.instagram.com/arorakaran_18)*
+
+<p align="left">
+    <a href="https://www.instagram.com/arorakaran_18" alt="instagram">
+        <img src="https://img.shields.io/badge/Instagram-%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-yellowgreen" /></a>
+    <a href="https://www.telegram.me/karan_arora18" alt="Telegram">
+        <img src="https://img.shields.io/badge/Telegram-%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-orange" /></a>
+</p>
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [product-screenshot]: images/screenshot.png
