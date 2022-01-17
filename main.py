@@ -1,5 +1,6 @@
 # GBoard Dictionary Maker GUI
 # Made By- Karthik Nair and Karan Arora
+# Aplha
 
 import os
 import datetime
