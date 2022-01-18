@@ -68,6 +68,7 @@ def save(entry, filename):
         os.remove("{}.txt".format(filename))
         messagebox.showinfo('(!) Saving.... (!)', "Saving file..\nFile:'{}.zip'".format(filename))
         word_gui.destroy()
+        main_gui()
     elif entry == "add":
         zipObj = ZipFile('{}.zip'.format(filename), 'w')
         zipObj.write('{}.txt'.format(filename), str(filename.replace(path + "/", "")) + ".txt")
@@ -75,6 +76,7 @@ def save(entry, filename):
         os.remove("{}.txt".format(filename))
         messagebox.showinfo('(!) Saving Changes.... (!)', "Saving file..\nFile:'{}.zip'".format(filename))
         new_add_gui.destroy()
+        main_gui()
 
 
 def file_generate():
