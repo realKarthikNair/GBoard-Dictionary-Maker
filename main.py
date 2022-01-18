@@ -10,73 +10,48 @@ from zipfile import ZipFile
 os_name = os.name
 
 
+def do_exit():
+    """ Exit Command """
+    home_gui.destroy()
+    exit()
+
+
 def go_back(entry):
     """ When Back Button is pressed """
+    global file_name1
     if entry == "new_folder":
         new_root.destroy()
         main_gui()
     elif entry == "new":
         if str(word_entry.get()) not in ["", " "] or str(shortcut_entry.get()) not in ["", " "]:
-            asK_user = messagebox.askokcancel("Are you sure?", "Are you sure you want to go back?")
+            asK_user = messagebox.askokcancel("Are you sure?", "Are you sure you want to go back?\nNo Progress will be saved!")
             if asK_user:
+                os.remove("{}".format(file_name1))
                 word_gui.destroy()
                 main_gui()
         else:
-            word_gui.destroy()
-            main_gui()
+            asK_user = messagebox.askokcancel("Are you sure?", "Are you sure you want to go back?\nNo Progress will be saved!")
+            if asK_user:
+                os.remove("{}".format(file_name1))
+                word_gui.destroy()
+                main_gui()
     elif entry == "choose_file":
         choose_gui.destroy()
         main_gui()
     elif entry == "add":
         if str(new_word_entry.get()) not in ["", " "] or str(new_shortcut_entry.get()) not in ["", " "]:
-            asK_user = messagebox.askokcancel("Are you sure?", "Are you sure you want to go back?")
+            asK_user = messagebox.askokcancel("Are you sure?", "Are you sure you want to go back?\nNo Progress will be saved!")
             if asK_user:
+                os.remove("{}.txt".format(add_file_name[:-4]))
                 new_add_gui.destroy()
                 main_gui()
         else:
-            new_add_gui.destroy()
-            main_gui()
-
-
-def save(entry, filename):
-    """ Saves the File when 'Save' button is pressed """
-    global path
-    with open('folder_path.txt', 'r') as file_read:
-        file_contents = file_read.readline()
-        path = file_contents + "Gboard-Shortcuts"
-        file_read.close()
-    if entry == "new" or entry == "add":  # If the User doesn't use Add more fn
-        if entry == "new":
-            word = str(word_entry.get())
-            shortcut = str(shortcut_entry.get())
-            word_input.set("")
-            shortcut_input.set("")
-        else:
-            word = str(new_word_entry.get())
-            shortcut = str(new_shortcut_entry.get())
-            new_word.set("")
-            new_shortcut.set("")
-        txt_file = open('{}.txt'.format(filename), 'a+')
-        to_write = "{}\t{}\t\n".format(shortcut, word)
-        txt_file.write(to_write)
-        txt_file.close()
-    # Zip the file and Deletes the .txt file
-    if entry == "new":
-        zipObj = ZipFile('{}.zip'.format(filename), 'w')
-        zipObj.write('{}.txt'.format(filename), str(filename.replace(path + "/", "")) + ".txt")
-        zipObj.close()
-        os.remove("{}.txt".format(filename))
-        messagebox.showinfo('(!) Saving.... (!)', "Saving file..\nFile:'{}.zip'".format(filename))
-        word_gui.destroy()
-        main_gui()
-    elif entry == "add":
-        zipObj = ZipFile('{}.zip'.format(filename), 'w')
-        zipObj.write('{}.txt'.format(filename), str(filename.replace(path + "/", "")) + ".txt")
-        zipObj.close()
-        os.remove("{}.txt".format(filename))
-        messagebox.showinfo('(!) Saving Changes.... (!)', "Saving file..\nFile:'{}.zip'".format(filename))
-        new_add_gui.destroy()
-        main_gui()
+            asK_user = messagebox.askokcancel("Are you sure?",
+                                              "Are you sure you want to go back?\nNo Progress will be saved!")
+            if asK_user:
+                os.remove("{}.txt".format(add_file_name[:-4]))
+                new_add_gui.destroy()
+                main_gui()
 
 
 def file_generate():
@@ -84,7 +59,7 @@ def file_generate():
     global path
     with open('folder_path.txt', 'r') as file_read:
         file_contents = file_read.readline()
-        path = file_contents + "Gboard-Shortcuts"
+        path = os.path.join(file_contents, "Gboard-Shortcuts")
         file_read.close()
     filename = str(path) + "/shortcuts-" + datetime.datetime.now().strftime("%d-%m-%Y-%H-%M-%S") + ".txt"
     with open(filename, 'w') as new_file:
@@ -93,32 +68,84 @@ def file_generate():
     return filename
 
 
+def save(entry, filename):
+    """ Saves the File when 'Save' button is pressed """
+    global path, add_file_name
+    with open('folder_path.txt', 'r') as file_read:
+        file_contents = file_read.readline()
+        path = os.path.join(file_contents, "Gboard-Shortcuts")
+        file_read.close()
+        if entry == "new" and ' ' in str(shortcut_entry.get()):  # Saves only when shortcut is one word
+            messagebox.showerror("(!) Shortcut (!)", "Shortcut can't be more than one word!")
+        elif entry == "add" and ' ' in str(new_shortcut_entry.get()):
+            messagebox.showerror("(!) Shortcut (!)", "Shortcut can't be more than one word!")
+        else:
+            if entry == "new" or entry == "add":  # If the User doesn't use Add more fn
+                if entry == "new":
+                    word = str(word_entry.get())
+                    shortcut = str(shortcut_entry.get())
+                    word_input.set("")
+                    shortcut_input.set("")
+                else:
+                    word = str(new_word_entry.get())
+                    shortcut = str(new_shortcut_entry.get())
+                    new_word.set("")
+                    new_shortcut.set("")
+                txt_file = open('{}.txt'.format(filename), 'a+')
+                to_write = "{}\t{}\t\n".format(shortcut, word)
+                txt_file.write(to_write)
+                txt_file.close()
+            # Zip the file and Deletes the .txt file
+            if entry == "new":
+                zipObj = ZipFile('{}.zip'.format(filename), 'w')
+                zipObj.write('{}.txt'.format(filename), str(filename.replace(path + "/", "")) + ".txt")
+                zipObj.close()
+                os.remove("{}.txt".format(filename))
+                messagebox.showinfo('(!) Saving.... (!)', "Saving file..\nFile:'{}.zip'".format(filename))
+                word_gui.destroy()
+                main_gui()
+            elif entry == "add":
+                zipObj = ZipFile('{}.zip'.format(filename), 'w')
+                zipObj.write('{}.txt'.format(filename), str(filename.replace(path + "/", "")) + ".txt")
+                zipObj.close()
+                os.remove("{}.txt".format(filename))
+                messagebox.showinfo('(!) Saving Changes.... (!)', "Saving file..\nFile:'{}.zip'".format(filename))
+                add_file_name = ""
+                new_add_gui.destroy()
+                main_gui()
+
+
 def add_more_words(entry, filename):
     """ When Add More Button if Pressed """
     global word_input, shortcut_input, new_word, new_shortcut
-    if entry == "new":  # When pressed from New Window
-        word = str(word_entry.get())
-        shortcut = str(shortcut_entry.get())
-        word_input.set("")
-        shortcut_input.set("")
-        with open(filename, 'a+') as file_write:
-            file_write.write("{}\t{}\t\n".format(shortcut, word))
-            file_write.close()
-    elif entry == "add":  # When pressed from Add Window
-        new_words = str(new_word_entry.get())
-        new_shortcuts = str(new_shortcut_entry.get())
-        new_word.set("")
-        new_shortcut.set("")
-        with open(filename, 'a+') as file_write:
-            file_write.write("{}\t{}\t\n".format(new_shortcuts, new_words))
-            file_write.close()
+    if entry == "new" and ' ' in str(shortcut_entry.get()):  # Saves only when shortcut is one word
+        messagebox.showerror("(!) Shortcut (!)", "Shortcut can't be more than one word!")
+    elif entry == "add" and ' ' in str(new_shortcut_entry.get()):
+        messagebox.showerror("(!) Shortcut (!)", "Shortcut can't be more than one word!")
+    else:
+        if entry == "new":  # When pressed from New Window
+            word = str(word_entry.get())
+            shortcut = str(shortcut_entry.get())
+            word_input.set("")
+            shortcut_input.set("")
+            with open(filename, 'a+') as file_write:
+                file_write.write("{}\t{}\t\n".format(shortcut, word))
+                file_write.close()
+        elif entry == "add":  # When pressed from Add Window
+            new_words = str(new_word_entry.get())
+            new_shortcuts = str(new_shortcut_entry.get())
+            new_word.set("")
+            new_shortcut.set("")
+            with open(filename+".txt", 'a+') as file_write:
+                file_write.write("{}\t{}\t\n".format(new_shortcuts, new_words))
+                file_write.close()
 
 
 def add_window(file):
     """ Add Words Gui """
     global new_add_gui, new_word, new_shortcut, new_word_entry, new_shortcut_entry
     with open('folder_path.txt', 'r') as file_read:
-        path1 = file_read.readline()
+        path1 = str(file_read.readline())
         file_read.close()
     if os.path.exists(file):
         choose_gui.destroy()
@@ -144,7 +171,7 @@ def add_window(file):
         dictionary = tk.Listbox(new_frame, yscrollcommand=scroll_bar.set, width=40)
         # Extract the .txt from Zip (add_file_name = zip selected by the user)
         with ZipFile(add_file_name, 'r') as zip_files:
-            zip_files.extractall(path=path1 + 'Gboard-Shortcuts')
+            zip_files.extractall(path=os.path.join(path1, 'Gboard-Shortcuts'))
         a_file = open("{}.txt".format(add_file_name[:-4]), 'r')
         for file_words in a_file:
             temp_words = (file_words.replace("\r\n", "")).replace("\t", "    ")
@@ -176,7 +203,7 @@ def add_window(file):
                                 command=lambda: (save("add", add_file_name[:-4])))
         new_add_gui_can.create_window(340, 400, window=save_button)
 
-        back_button = tk.Button(new_add_gui_can, text="Back", bg="yellow", padx=5, pady=5)
+        back_button = tk.Button(new_add_gui_can, text="Back", bg="yellow", padx=5, pady=5, command=lambda: (go_back("add")))
         new_add_gui_can.create_window(40, 40, window=back_button)
 
         new_add_gui.mainloop()
@@ -186,7 +213,7 @@ def browse_file():
     """ Let User select a Zip File! """
     global file_selected, add_file_name, path, new_filename
     with open('folder_path.txt', 'r') as file_read:
-        temp_path = str(file_read.readline()) + "Gboard-Shortcuts"
+        temp_path = os.path.join(str(file_read.readline()), 'Gboard-Shortcuts')
         file_read.close()
     file_selected = filedialog.askopenfilename(initialdir=temp_path, filetypes=[("zip", "*.zip")])
     add_file_name = file_selected
@@ -206,14 +233,14 @@ def choose_file():
         choose_label = tk.Label(choose_gui, text="Select A File:")
         choose_label.pack()
 
-        browse_button = tk.Button(choose_gui, text="Browse", bg="yellow", command=browse_file)
+        browse_button = tk.Button(choose_gui, text="Browse", bg="skyblue", command=browse_file)
         browse_button.pack()
 
         open_button = tk.Button(choose_gui, text="Open", bg="lightgreen", command=lambda: (add_window(add_file_name)))
         open_button.pack()
 
         # In-Case someone has no existing file
-        back_button = tk.Button(choose_gui, text="Back", bg="red", fg="white", command=lambda: (go_back("choose_file")))
+        back_button = tk.Button(choose_gui, text="Back", bg="yellow", command=lambda: (go_back("choose_file")))
         back_button.pack()
 
         choose_gui.mainloop()
@@ -269,7 +296,7 @@ def new_window(fn):
 
 
 def browse(selected):
-    """ Let the user select path (connected to new_folder()) """
+    """ Let the user select path to make the folder (connected to new_folder()) """
     if not selected:
         folder_selected = filedialog.askdirectory()
         folder_path.set(folder_selected)
@@ -286,14 +313,14 @@ def browse(selected):
             file2.close()
         new_root.destroy()
         main_gui()
-    elif not selected and str(entry_box.get() not in ['', ' ']):  # If user enters or selects directory
+    if (not selected and str(entry_box.get()) not in ['', ' ']) or (selected and str(entry_box.get()) not in ['', ' ']):  # If user enters or selects directory
         check_dir = os.path.exists(str(entry_box.get()))
         if check_dir:
             messagebox.showinfo("Folder Created Successfully!", "Folder Created at:- {}".format(str(entry_box.get())))
             with open('folder_path.txt', 'w') as file2:
                 file2.write(str(entry_box.get()))
                 file2.close()
-            new_path = os.path.join(str(entry_box.get()), '/Gboard-Shortcuts')
+            new_path = os.path.join(str(entry_box.get()), 'Gboard-Shortcuts')
             os.mkdir(new_path)
             new_root.destroy()
             main_gui()
@@ -332,31 +359,30 @@ def new_folder():
 
 def check_folder(entry):
     """ Checks if the Folder exist at path mentioned in folder_path.txt! """
+    global file_name1
     with open("folder_path.txt", "r") as file:
         file_content = file.readline()
         file.close()
     if file_content in ['', ' ']:  # Checks if the file is empty
-        print("r")
         if os_name == "nt":
             to_write = "C:/"
+            name = "Windows"
         elif os_name == "posix":
             to_write = str(os.getenv("HOME"))
+            name = "Linux"
         else:
-            to_write = ""
+            to_write, name = ["", ""]
         with open("folder_path.txt", 'w') as file1:
             file1.write(to_write)  # Write the default directory to folder_path.txt
             file1.close()
+        messagebox.showinfo("(!) {} Detected! (!)".format(name), "(!) Updating Path... (!)")
     elif file_content not in ['', ' ']:  # If the file is not empty
-        if os_name == "nt":
-            temp_path = file_content + "Gboard-Shortcuts"
-        elif os_name == "posix":
-            temp_path = file_content + "/Gboard-Shortcuts"
-        else:
-            temp_path = ""
+        temp_path = os.path.join(file_content, "Gboard-Shortcuts")
         isdir = os.path.isdir(temp_path)
         if isdir:  # if folder exist
             if entry == "new":
                 fn = file_generate()
+                file_name1 = fn
                 new_window(fn)
             else:
                 return True
@@ -364,11 +390,6 @@ def check_folder(entry):
             messagebox.showinfo("Folder Doesn't Exist",
                                 "Select/Enter Path or Click on\nleave it blank! It will select\nDefault Directory!")
             new_folder()
-
-
-def do_exit():
-    home_gui.destroy()
-    exit()
 
 
 def main_gui():
