@@ -1,4 +1,4 @@
-<p align="center">GBoard Dictionary maker</p><br>
+<p align="center">License | GBoard Dictionary maker</p><br>
 © Copyright 2021-2022 Karthik Nair and Karan Arora <br><br>
 
 Any individual who obtains a copy of this software and associated files including the license is allowed to use it without any restrictions free of cost, but with no warranty or similar implifications in whatsoever conditions.<br><br>
