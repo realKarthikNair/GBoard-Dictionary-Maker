@@ -113,7 +113,7 @@ Well, imagine you have to make 100 such shortcuts. You'll follow the steps above
 ### *For now, use the [legacy](https://github.com/realKarthikNair/GBoard-Dictionary-Maker/tree/legacy) branch)*
 
 ### **On MacOS**
-#### *Normal installation should work, but we can't guarantee since [the code is untested](#we-urgently-need-someone-on-mac-to-help-us-extend-project-compatibility). Incase you encounter issues on Mac, kindly either help us by raising an [issue](https://github.com/realKarthikNair/GBoard-Dictionary-Maker/issues/new/choose) and help us in extending compatibility. You can alternatively choose the [legacy](https://github.com/realKarthikNair/GBoard-Dictionary-Maker/tree/legacy) branch*
+#### *Normal installation should work, but we can't guarantee since [the code is untested](https://github.com/realKarthikNair/GBoard-Dictionary-Maker#we-urgently-need-someone-on-mac-to-help-us-extend-project-compatibility). Incase you encounter issues on Mac, kindly either help us by raising an [issue](https://github.com/realKarthikNair/GBoard-Dictionary-Maker/issues/new/choose) and help us in extending compatibility. You can alternatively choose the [legacy](https://github.com/realKarthikNair/GBoard-Dictionary-Maker/tree/legacy) branch*
 
 ### How to import in Gboard?
 **Run the code , generate the zip, copy it to your mobile and import from Gboard settings>Dictionary>Personal Dictionary>All Languages>then choose import option from the drop-down menu**
