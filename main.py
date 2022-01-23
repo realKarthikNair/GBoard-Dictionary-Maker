@@ -24,13 +24,15 @@ def go_back(entry):
         main_gui()
     elif entry == "new":
         if str(word_entry.get()) not in ["", " "] or str(shortcut_entry.get()) not in ["", " "]:
-            asK_user = messagebox.askokcancel("Are you sure?", "Are you sure you want to go back?\nNo Progress will be saved!")
+            asK_user = messagebox.askokcancel("Are you sure?",
+                                              "Are you sure you want to go back?\nNo Progress will be saved!")
             if asK_user:
                 os.remove("{}".format(file_name1))
                 word_gui.destroy()
                 main_gui()
         else:
-            asK_user = messagebox.askokcancel("Are you sure?", "Are you sure you want to go back?\nNo Progress will be saved!")
+            asK_user = messagebox.askokcancel("Are you sure?",
+                                              "Are you sure you want to go back?\nNo Progress will be saved!")
             if asK_user:
                 os.remove("{}".format(file_name1))
                 word_gui.destroy()
@@ -40,7 +42,8 @@ def go_back(entry):
         main_gui()
     elif entry == "add":
         if str(new_word_entry.get()) not in ["", " "] or str(new_shortcut_entry.get()) not in ["", " "]:
-            asK_user = messagebox.askokcancel("Are you sure?", "Are you sure you want to go back?\nNo Progress will be saved!")
+            asK_user = messagebox.askokcancel("Are you sure?",
+                                              "Are you sure you want to go back?\nNo Progress will be saved!")
             if asK_user:
                 os.remove("{}.txt".format(add_file_name[:-4]))
                 new_add_gui.destroy()
@@ -75,11 +78,26 @@ def save(entry, filename):
         file_contents = file_read.readline()
         path = os.path.join(file_contents, "Gboard-Shortcuts")
         file_read.close()
-        if entry == "new" and ' ' in str(shortcut_entry.get()):  # Saves only when shortcut is one word
-            messagebox.showerror("(!) Shortcut (!)", "Shortcut can't be more than one word!")
-        elif entry == "add" and ' ' in str(new_shortcut_entry.get()):
-            messagebox.showerror("(!) Shortcut (!)", "Shortcut can't be more than one word!")
-        else:
+        saves = False
+        if entry == "new":
+            if ' ' in str(shortcut_entry.get()) or (str(word_entry.get()) in ["", " "] or str(shortcut_entry.get()) in ["", " "]):
+                if str(word_entry.get()) in [" ", ""] and str(shortcut_entry.get()) in ["", " "]:
+                    saves = True
+                elif str(word_entry.get()) in ["", " "] or str(shortcut_entry.get()) in ["", " "]:
+                    messagebox.showerror("(!) Field Empty (!)", "Field can't be empty!")
+                else:  # Saves only when shortcut is one word
+                    messagebox.showerror("(!) Shortcut (!)", "Shortcut can't be more than one word!")
+            else:
+                saves = True
+        elif entry == "add":
+            if ' ' in str(new_shortcut_entry.get()) or (str(new_word_entry.get()) in ["", " "] or str(new_shortcut_entry.get()) in ["", " "]):
+                if str(new_word_entry.get()) in ["", " "] or str(new_shortcut_entry.get()) in ["", " "]:
+                    messagebox.showerror("(!) Field Empty (!)", "Field can't be empty!")
+                else:  # Saves only when shortcut is one word
+                    messagebox.showerror("(!) Shortcut (!)", "Shortcut can't be more than one word!")
+            else:
+                saves = True
+        if saves:
             if entry == "new" or entry == "add":  # If the User doesn't use Add more fn
                 if entry == "new":
                     word = str(word_entry.get())
@@ -118,11 +136,24 @@ def save(entry, filename):
 def add_more_words(entry, filename):
     """ When Add More Button if Pressed """
     global word_input, shortcut_input, new_word, new_shortcut
-    if entry == "new" and ' ' in str(shortcut_entry.get()):  # Saves only when shortcut is one word
-        messagebox.showerror("(!) Shortcut (!)", "Shortcut can't be more than one word!")
-    elif entry == "add" and ' ' in str(new_shortcut_entry.get()):
-        messagebox.showerror("(!) Shortcut (!)", "Shortcut can't be more than one word!")
-    else:
+    add = False
+    if entry == "new":
+        if ' ' in str(shortcut_entry.get()) or (str(word_entry.get()) in ["", " "] or str(shortcut_entry.get()) in ["", " "]):
+            if str(word_entry.get()) in ["", " "] or str(shortcut_entry.get()) in ["", " "]:
+                messagebox.showerror("(!) Field Empty (!)", "Field can't be empty!")
+            else:  # Saves only when shortcut is one word
+                messagebox.showerror("(!) Shortcut (!)", "Shortcut can't be more than one word!")
+        else:
+            add = True
+    elif entry == "add":
+        if ' ' in str(new_shortcut_entry.get()) or (str(new_word_entry.get()) in ["", " "] or str(new_shortcut_entry.get()) in ["", " "]):
+            if str(new_word_entry.get()) in ["", " "] or str(new_shortcut_entry.get()) in ["", " "]:
+                messagebox.showerror("(!) Field Empty (!)", "Field can't be empty!")
+            else:  # Saves only when shortcut is one word
+                messagebox.showerror("(!) Shortcut (!)", "Shortcut can't be more than one word!")
+        else:
+            add = True
+    if add:
         if entry == "new":  # When pressed from New Window
             word = str(word_entry.get())
             shortcut = str(shortcut_entry.get())
@@ -136,7 +167,7 @@ def add_more_words(entry, filename):
             new_shortcuts = str(new_shortcut_entry.get())
             new_word.set("")
             new_shortcut.set("")
-            with open(filename+".txt", 'a+') as file_write:
+            with open(filename + ".txt", 'a+') as file_write:
                 file_write.write("{}\t{}\t\n".format(new_shortcuts, new_words))
                 file_write.close()
 
@@ -203,7 +234,8 @@ def add_window(file):
                                 command=lambda: (save("add", add_file_name[:-4])))
         new_add_gui_can.create_window(340, 400, window=save_button)
 
-        back_button = tk.Button(new_add_gui_can, text="Back", bg="yellow", padx=5, pady=5, command=lambda: (go_back("add")))
+        back_button = tk.Button(new_add_gui_can, text="Back", bg="yellow", padx=5, pady=5,
+                                command=lambda: (go_back("add")))
         new_add_gui_can.create_window(40, 40, window=back_button)
 
         new_add_gui.mainloop()
@@ -313,7 +345,8 @@ def browse(selected):
             file2.close()
         new_root.destroy()
         main_gui()
-    if (not selected and str(entry_box.get()) not in ['', ' ']) or (selected and str(entry_box.get()) not in ['', ' ']):  # If user enters or selects directory
+    if (not selected and str(entry_box.get()) not in ['', ' ']) or (
+            selected and str(entry_box.get()) not in ['', ' ']):  # If user enters or selects directory
         check_dir = os.path.exists(str(entry_box.get()))
         if check_dir:
             messagebox.showinfo("Folder Created Successfully!", "Folder Created at:- {}".format(str(entry_box.get())))
