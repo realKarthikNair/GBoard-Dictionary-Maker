@@ -114,9 +114,9 @@ Well, imagine you have to make 100 such shortcuts. You'll follow the steps above
 
    ✅ Add a Graphical User Interface (GUI)<br>
    ✅ Ability to add more shortcuts to existing dictionary zips<br>
+   ✅ Fix some graphical glitches in Linux (possibly in Mac OS and other UNIX derivatives too)<br>
   〚 〛 Support on Mac and Android<br>
   〚 〛  Documenting and further optimisation of code<br>
-  〚 〛 Fix some graphical glitches in Linux (possibly in Mac OS and other UNIX derivatives too)<br>
   〚 〛 Multi-language Support<br>
 
 See the [open issues](https://github.com/realKarthikNair/GBoard-Dictionary-Maker/issues) for a full list of proposed features (and known issues).
