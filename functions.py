@@ -70,7 +70,6 @@ def dict_create(path,status,file=None,is_from_zip=None):
     
 def dict_add(path,file=None):
     if file==None:
-        print("hey")
         print(f"reading files from {path} . . . . .")
         #os.path.isfile
         print("Choose the file where more shortcuts are to be added :\n");count=0
