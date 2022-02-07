@@ -39,5 +39,5 @@ IF YOU SOMEHOW ENDED UP HERE UNINTENTIONALLY, IT IS HIGHLY RECOMMENDED TO REFER 
 
 Catch me on :
 
-[instagram ](https://www.instagram.com/harry_kris_) <br>
+[instagram ](https://www.instagram.com/karthiknair.sh) <br>
 [twitter](https://www.twitter.com/realkarthiknair)
