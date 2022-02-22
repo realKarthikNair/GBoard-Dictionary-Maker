@@ -93,7 +93,7 @@ Well, imagine you have to make 100 such shortcuts. You'll follow the steps above
  3. 100% made with Python and yes , it's FOSS<br>
 ## *Prerequisites*
  1. Python
- 2. Tkinter
+ 2. Tkinter (incase your installation of python didn't come with tkinter preinstalled)
 <br>A simple Google search of the format "install Python/Tkinter on \<your platform\>" would lead you to the right pages<br> e.g.,Google "Install Python on Windows" and "install Tkinter on Windows"
 
 ## *Installation*
