@@ -167,7 +167,7 @@ This software is being licensed on [these](https://github.com/realKarthikNair/GB
 
 ### Support US
 
-<img src="donate.jpg">
+<img src="donate.jpg" width="300">
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [product-screenshot]: images/screenshot.png
