@@ -86,7 +86,7 @@ def save(entry, filename):
                     saves = True
                 elif str(word_entry.get()) in ["", " "] or str(shortcut_entry.get()) in ["", " "]:
                     messagebox.showerror("(!) Field Empty (!)", "Field can't be empty!")
-                else:  # Saves only when shortcut is one word
+                else:  # Shortcut can only be a single word since that's how GBoard Dictionaries work
                     messagebox.showerror("(!) Shortcut (!)", "Shortcut can't be more than one word!")
             else:
                 saves = True
