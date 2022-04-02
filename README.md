@@ -28,7 +28,7 @@
         <img src="https://img.shields.io/badge/%20%20Report%20a%20Bug-%F0%9F%90%9E-orange" /></a>
     <a href="https://github.com/realKarthikNair/GBoard-Dictionary-Maker/issues/new/choose" alt="Request a Feature">
         <img src="https://img.shields.io/badge/Request%20a%20Feature-%F0%9F%93%88-yellowgreen" /></a>
-    <a href="https://telegra.ph/payment-links-coming-soon-01-07" alt="Donate">
+    <a href="#support-us" alt="Donate">
         <img src="https://img.shields.io/badge/donate-%F0%9F%92%B0-lightgrey" /></a>
     <a href="https://github.com/realKarthikNair/GBoard-Dictionary-Maker/tree/legacy" alt="Legacy Branch">
         <img src="https://img.shields.io/badge/Legacy%20Branch-%F0%9F%91%B4-blue" /></a>
@@ -93,7 +93,7 @@ Well, imagine you have to make 100 such shortcuts. You'll follow the steps above
  3. 100% made with Python and yes , it's FOSS<br>
 ## *Prerequisites*
  1. Python
- 2. Tkinter
+ 2. Tkinter (incase your installation of python didn't come with tkinter preinstalled)
 <br>A simple Google search of the format "install Python/Tkinter on \<your platform\>" would lead you to the right pages<br> e.g.,Google "Install Python on Windows" and "install Tkinter on Windows"
 
 ## *Installation*
@@ -149,7 +149,7 @@ This software is being licensed on [these](https://github.com/realKarthikNair/GB
 ### [Karthik Nair](https://github.com/realkarthiknair)
 
 <p align="left">
-    <a href="https://www.instagram.com/harry_kris_" alt="instagram">
+    <a href="https://www.instagram.com/karthiknair.sh" alt="instagram">
         <img src="https://img.shields.io/badge/Instagram-%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-yellowgreen" /></a>
     <a href="https://www.twitter.com/realkarthiknair" alt="twitter">
         <img src="https://img.shields.io/badge/Twitter-%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-orange" /></a>
@@ -165,6 +165,9 @@ This software is being licensed on [these](https://github.com/realKarthikNair/GB
         <img src="https://img.shields.io/badge/Telegram-%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB-orange" /></a>
 </p>
 
+### Support US
+
+<img src="donate.jpg" width="300">
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [product-screenshot]: images/screenshot.png
