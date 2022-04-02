@@ -28,7 +28,7 @@
         <img src="https://img.shields.io/badge/%20%20Report%20a%20Bug-%F0%9F%90%9E-orange" /></a>
     <a href="https://github.com/realKarthikNair/GBoard-Dictionary-Maker/issues/new/choose" alt="Request a Feature">
         <img src="https://img.shields.io/badge/Request%20a%20Feature-%F0%9F%93%88-yellowgreen" /></a>
-    <a href="https://telegra.ph/payment-links-coming-soon-01-07" alt="Donate">
+    <a href="#support-us" alt="Donate">
         <img src="https://img.shields.io/badge/donate-%F0%9F%92%B0-lightgrey" /></a>
     <a href="https://github.com/realKarthikNair/GBoard-Dictionary-Maker/tree/legacy" alt="Legacy Branch">
         <img src="https://img.shields.io/badge/Legacy%20Branch-%F0%9F%91%B4-blue" /></a>
