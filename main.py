@@ -71,6 +71,10 @@ def file_generate():
         new_file.close()
     return filename
 
+def validate_shorcut():
+
+    # Soon
+
 
 def save(entry, filename):
     """ Saves the File when 'Save' button is pressed """
