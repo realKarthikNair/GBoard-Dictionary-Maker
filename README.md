@@ -38,39 +38,44 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li>
-      <a href="#what-is-a-gboard-dictionary-why-do-you-need-to-make-one">What is a GBoard Dictionary? Why do you need to make one?</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#how-to-create-one">How to create a GBoard Dictionary manually</a>
-      <a href="#okay-that-seems-easy-so-whats the point of this project">Motive of this project</a>
-      <a href="#features">Features</a>
-      <a>Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
+    <li><a href="#what-is-a-gboard Dictionary-why-do-you-need-to-make-one?">What is a GBoard Dictionary? Why do you need to make one?</a></li>
+    <li><a href="#okay-that-seems-easy-so-whats-the-point-of-this-project">Point of this project</a></li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#installation">Installation</a></li>
+      <ul><li><a href="#prerequisites">Prerequisites</a></li></ul>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#catch-us-on">Contact Us</a></li>
+    <li><a href="#built-with-love">Contact Us</a></li>
   </ol>
 </details>
 
 
 ## *What is a GBoard Dictionary? Why do you need to make one?*
-GBoard Dictionaries allow GBoard- The Google Keyboard to display word suggestion pop-ups whenever you start typing. These suggestions save a lot of our typing time, right?<br>
-Now, GBoard also allows you to create many such custom dictionary elements, like keybindings, e.g., you type in "hey" and boom! you get an entire sentence "Hey There! This is Jennifer" as a suggestion, which you can tap and automatically type in an entire sentence that quickly. <br> Making several such custom shortcuts can increase your typing speed upto any extent and save you a lot of time, especially if you're leading a really busy life!
+GBoard Dictionaries allow 'GBoard - The Google Keyboard' to suggest words/sentences based on partial inputs. They're basically like keybindings we can create to type out the "bigger stuffs" easily e.g. you type in "im" and GBoard shows you a suggestion on the keyboard bar "I am Jennifer"; Isn't that cool?
+
+So how to create such a shortcut?
+
+`GBoard Settings>Dictionary>Personal Dictionary>All languages>Then tap on the "+" icon and create shortcuts.`
+
+**Making several such custom shortcuts can increase your typing speed upto any extent and save you a lot of time, especially if you're leading a really busy life!**
 <br>
-Also that these shortcuts can be made with any language, or even emojis!
+
+"Also that these shortcuts can be made with any language, or even emojis!" 
+
 <br>
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <img src = "res/demo2.gif" width ="240" /> <img src = "res/demo3.gif" width ="240" /> <img src = "res/demo1.gif" width ="240" />
+
+
+<br>
+
+## *"Okay that seems easy, so what's the point of this project?"*
+Well, imagine you have to make 100 such shortcuts. GBoard-Dictionary-Maker can create mutiple such shortcuts in bulk on a single window and then generate a GBoard importable zip rather than going back and forth to the GBoard Settings Menus. 
+<br>
 
 ### Built With
 
@@ -80,23 +85,18 @@ Also that these shortcuts can be made with any language, or even emojis!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## *How to create one?*
-Gboard Settings>Dictionary>Personal dictionary>All languages>Then tap on the "+" icon and create shortcuts. 
-<br>
-
-## *"Okay that seems easy, so what's the point of this project?"*
-Well, imagine you have to make 100 such shortcuts. You'll follow the steps above, then go to the previous menu, then again tap the "+" icon, repeat it for 100 times? That's exactly why we made this project. <br>GBoard-Dictionary-Maker can create mutiple such shortcuts in bulk on a single window and then generate a GBoard importable zip!
-<br>
 ## *Features*
  1. Create Gboard importable dictionary file
  2. Edit existing zip/txt dictionary file given
  3. 100% made with Python and yes , it's FOSS<br>
-## *Prerequisites*
+
+
+## *Installation*
+
+#### *Prerequisites*
  1. Python
  2. Tkinter (incase your installation of python didn't come with tkinter preinstalled)
 <br>A simple Google search of the format "install Python/Tkinter on \<your platform\>" would lead you to the right pages<br> e.g.,Google "Install Python on Windows" and "install Tkinter on Windows"
-
-## *Installation*
 
 ### **On Windows, Linux and BSD**
 ### *Installation from the command line*
@@ -145,7 +145,7 @@ This software is being licensed on [these](https://github.com/realKarthikNair/GB
 
 <!-- > Upcoming updates are being cooked in the 'alpha'  branch: feel free to test them out...-->
 
-## Catch us on: 
+## Built with love: 
 ### [Karthik Nair](https://github.com/realkarthiknair)
 
 <p align="left">
