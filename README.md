@@ -109,6 +109,7 @@ Well, imagine you have to make 100 such shortcuts. GBoard-Dictionary-Maker can c
 ### **On MacOS**
 #### *Normal installation should work, but we can't guarantee since the code is untested. Incase you encounter issues on Mac, kindly either help us by raising an [issue](https://github.com/realKarthikNair/GBoard-Dictionary-Maker/issues/new/choose) and help us in extending compatibility. You can alternatively choose the [legacy](https://github.com/realKarthikNair/GBoard-Dictionary-Maker/tree/legacy) branch*
 <p align="right">(<a href="#top">back to top</a>)</p><br>
+
 ### How to import in Gboard?
 **Run the code , generate the zip, copy it to your mobile and import from Gboard settings>Dictionary>Personal Dictionary>All Languages>then choose import option from the drop-down menu**
 
@@ -127,9 +128,7 @@ See the [open issues](https://github.com/realKarthikNair/GBoard-Dictionary-Maker
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make GBoard-Dictionary-Maker, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-
+Don't forget to give the project a star! Thanks again!  
 ## License
 
 This software is being licensed on [these](https://github.com/realKarthikNair/GBoard-Dictionary-Maker/blob/main/LICENSE.md) terms 
@@ -159,5 +158,3 @@ This software is being licensed on [these](https://github.com/realKarthikNair/GB
 
 <img src="res/donate.jpg" width="300">
 
-<!-- MARKDOWN LINKS & IMAGES -->
-[product-screenshot]: images/screenshot.png
