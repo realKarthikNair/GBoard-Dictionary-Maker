@@ -63,16 +63,10 @@ So how to create such a shortcut?
 <br>
 
 "Also that these shortcuts can be made with any language, or even emojis!" 
-
 <br>
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<img src = "res/demo2.gif" width ="240" /> <img src = "res/demo3.gif" width ="240" /> <img src = "res/demo1.gif" width ="240" />
-
-
-<br>
-
+<img src = "res/demo2.gif" width ="240" /> <img src = "res/demo3.gif" width ="240" /> <img src = "res/demo1.gif" width ="240" />  
 ## *"Okay that seems easy, so what's the point of this project?"*
 Well, imagine you have to make 100 such shortcuts. GBoard-Dictionary-Maker can create mutiple such shortcuts in bulk on a single window and then generate a GBoard importable zip rather than going back and forth to the GBoard Settings Menus. 
 <br>
@@ -113,8 +107,8 @@ Well, imagine you have to make 100 such shortcuts. GBoard-Dictionary-Maker can c
 ### *For now, use the [legacy](https://github.com/realKarthikNair/GBoard-Dictionary-Maker/tree/legacy) branch)*
 
 ### **On MacOS**
-#### *Normal installation should work, but we can't guarantee since [the code is untested](https://github.com/realKarthikNair/GBoard-Dictionary-Maker#we-urgently-need-someone-on-mac-to-help-us-extend-project-compatibility). Incase you encounter issues on Mac, kindly either help us by raising an [issue](https://github.com/realKarthikNair/GBoard-Dictionary-Maker/issues/new/choose) and help us in extending compatibility. You can alternatively choose the [legacy](https://github.com/realKarthikNair/GBoard-Dictionary-Maker/tree/legacy) branch*
-
+#### *Normal installation should work, but we can't guarantee since the code is untested. Incase you encounter issues on Mac, kindly either help us by raising an [issue](https://github.com/realKarthikNair/GBoard-Dictionary-Maker/issues/new/choose) and help us in extending compatibility. You can alternatively choose the [legacy](https://github.com/realKarthikNair/GBoard-Dictionary-Maker/tree/legacy) branch*
+<p align="right">(<a href="#top">back to top</a>)</p><br>
 ### How to import in Gboard?
 **Run the code , generate the zip, copy it to your mobile and import from Gboard settings>Dictionary>Personal Dictionary>All Languages>then choose import option from the drop-down menu**
 
@@ -135,15 +129,11 @@ Contributions are what make the open source community such an amazing place to l
 If you have a suggestion that would make GBoard-Dictionary-Maker, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
 
-### **We Urgently need someone on Mac to help us extend project compatibility since we don't own an Apple computer and thus can't test the code**
-## License 
+
+## License
+
 This software is being licensed on [these](https://github.com/realKarthikNair/GBoard-Dictionary-Maker/blob/main/LICENSE.md) terms 
-## *Enjoy !*
-
->Made with Love™ ❤️<br>
->by Karthik Nair and Karan Arora
-
-<!-- > Upcoming updates are being cooked in the 'alpha'  branch: feel free to test them out...-->
+<p align="right">(<a href="#top">back to top</a>)</p><br>
 
 ## Built with love: 
 ### [Karthik Nair](https://github.com/realkarthiknair)
